@@ -2,10 +2,25 @@
 const h1 = document.getElementById("main-title");
 const button = document.querySelector(".button");
 const ul = document.querySelector("ul");
+const li = document.querySelector("li:last-of-type")
+
 
 let pageChange = false;
 
 console.dir(ul);
+
+//ul children elements will be put in a list 
+console.log(ul.children);
+
+//grabs all its children including text nodes
+console.log(ul.childNodes);
+
+//parentNode and parentElement are pretty much the same. They grab the direct parent of the node
+console.log(li.parentElement);
+
+//just like queryselector but only grabs ancestors
+ul.closest
+
 //GRABS ALL THESE ELEMENTS AND PUT THEM IN A LIST
 const list = document.querySelectorAll("li");
 
