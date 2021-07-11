@@ -19,7 +19,16 @@ console.log(ul.childNodes);
 console.log(li.parentElement);
 
 //just like queryselector but only grabs ancestors
-ul.closest
+const body = ul.closest('body');
+
+//grabs the previous element sibling
+const header = ul.previousElementSibling;
+
+//grabs the next element sibling
+const ulSibling = header.previousElementSibling;
+
+//grabs the sibling node like text nodes
+header.previousSibling;
 
 //GRABS ALL THESE ELEMENTS AND PUT THEM IN A LIST
 const list = document.querySelectorAll("li");
@@ -38,6 +47,7 @@ const addStyle = (pagerColor,listColor,headColor) =>{
         document.body.style.backgroundColor = pagerColor;
        
         button.textContent = "REVERT";
+        button.id = 'button';
         pageChange = true;
     }
     else{
@@ -50,9 +60,10 @@ const addStyle = (pagerColor,listColor,headColor) =>{
             iterator.style.color = "black";
         }
         document.body.style.backgroundColor = "white";
+        button.id = '';
         pageChange = false;
-    }
+    }    
   
 } 
 
-button.addEventListener("click",addStyle.bind(this,"orange","white","blue"));
+button.addEventListener("click",addStyle.bind(this,"orange","white","#3F3FD4"));
