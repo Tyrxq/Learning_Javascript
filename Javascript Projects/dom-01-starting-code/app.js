@@ -3,7 +3,7 @@ const h1 = document.getElementById("main-title");
 const button = document.querySelector(".button");
 const ul = document.querySelector("ul");
 const li = document.querySelector("li:last-of-type")
-
+const container = document.querySelector(".container")
 
 let pageChange = false;
 
@@ -25,10 +25,10 @@ const body = ul.closest('body');
 const header = ul.previousElementSibling;
 
 //grabs the next element sibling
-const ulSibling = header.previousElementSibling;
+//const ulSibling = header.previousElementSibling;
 
 //grabs the sibling node like text nodes
-header.previousSibling;
+//header.previousSibling;
 
 //GRABS ALL THESE ELEMENTS AND PUT THEM IN A LIST
 const list = document.querySelectorAll("li");
@@ -45,7 +45,8 @@ const addStyle = (pagerColor,listColor,headColor) =>{
             iterator.style.color = listColor;
         }
         document.body.style.backgroundColor = pagerColor;
-       
+        container.style.bottom = "45px";
+        container.style.background= "#3F3FD4"
         button.textContent = "REVERT";
         button.id = 'button';
         pageChange = true;
@@ -61,9 +62,11 @@ const addStyle = (pagerColor,listColor,headColor) =>{
         }
         document.body.style.backgroundColor = "white";
         button.id = '';
+        container.style.bottom = "";
+        container.style.background= ""
         pageChange = false;
     }    
   
 } 
 
-button.addEventListener("click",addStyle.bind(this,"orange","white","#3F3FD4"));
+button.addEventListener("click",addStyle.bind(this,"orange","white","white"));

@@ -1,4 +1,11 @@
+
+
+body{
+    margin: 0;
+}
+
 #button {
+    position: relative;
     font: inherit;
     background: black;
     color: white;
@@ -6,9 +13,47 @@
     padding: 1rem;
     cursor: pointer;
     border-radius: 100% 20%;
+    top: 50%;
   }
   #button:hover{
       color:#8A8AE5;
       box-shadow: 10px 10px;
   }
+  
+ nav{
+    position: absolute;
+    left:60%;
+    bottom:1px;
+ }
+ h1{
+     margin-bottom: 0;
+     top: 20px;
+ }
 
+ nav ul{
+     position: relative;
+    margin: 0;
+    padding:0;
+    list-style: none;
+    right:30px;
+}
+nav li{
+    position: relative;
+    display: inline;
+    margin-left: 70px;
+    bottom: 25px;
+}
+
+nav a{
+    color:aliceblue;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+}
+
+.container{
+  position:relative;
+  width:100%;
+  height:20%;
+ 
+}
